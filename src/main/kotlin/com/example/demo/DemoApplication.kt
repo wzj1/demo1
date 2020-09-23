@@ -9,9 +9,10 @@ import org.springframework.context.annotation.PropertySource
 import org.springframework.core.env.Environment
 import javax.annotation.Resource
 
-
+/**
+ * 启动类
+ */
 @SpringBootApplication(exclude =[DataSourceAutoConfiguration::class])
-//@PropertySource("classpath:application.properties")
  class DemoApplication {
 
     @Resource
@@ -24,7 +25,9 @@ import javax.annotation.Resource
         }
     }
 
-
+    /**
+     *   代码初始化 jdbc
+     */
     //destroy-method="close"的作用是当数据库连接不使用的时候,就把该连接重新放到数据池中,方便下次使用调用.
     @Bean(destroyMethod = "close")
     fun dataSource(): DruidDataSource? {

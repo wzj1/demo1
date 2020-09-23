@@ -2,6 +2,9 @@ package com.example.demo.bean
 
 import org.springframework.stereotype.Repository
 
+/**
+ * 登录 Bean类
+ */
 @Repository
 class LoginEntity {
     //id

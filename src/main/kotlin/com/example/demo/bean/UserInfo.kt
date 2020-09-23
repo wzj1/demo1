@@ -2,6 +2,9 @@ package com.example.demo.bean
 
 import org.springframework.stereotype.Repository
 
+/**
+ * 新用户信息
+ */
 @Repository
 class UserInfo {
     //id
@@ -36,7 +39,6 @@ class UserInfo {
 
     //注册地址
     var registerAddress: String? = null
-
 
     //默认地址
     var defaultAddress: String? = null

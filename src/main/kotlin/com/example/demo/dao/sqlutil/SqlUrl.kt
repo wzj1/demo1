@@ -3,6 +3,9 @@ package com.example.demo.dao.sqlutil
 import com.example.demo.bean.LoginEntity
 import com.example.demo.bean.UserInfo
 
+/**
+ * SQL 语句 拼接类
+ */
 object SqlUrl {
     private const val  login_Table:String = "logininfo"
     private const val  user_table:String = "user"

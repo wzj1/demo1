@@ -1,10 +1,10 @@
 package com.example.demo.returndataUtils
 
-import com.alibaba.druid.support.json.JSONUtils
-import com.google.gson.Gson
 import com.google.gson.JsonObject
-import com.oracle.javafx.jmx.json.JSONWriter
 
+/**
+ * 返回数据 封装类
+ */
 object ResultData {
     var json: JsonObject = JsonObject()
 

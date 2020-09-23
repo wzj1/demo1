@@ -2,6 +2,9 @@ package com.example.demo.bean
 
 import org.springframework.stereotype.Repository
 
+/**
+ * 用户信息
+ */
 @Repository
 class UserEntity {
 
