@@ -6,10 +6,8 @@ import com.example.demo.bean.UserInfo
 /**
  * SQL 语句 拼接类
  */
-object SqlUrl {
-    private const val  login_Table:String = "logininfo"
-    private const val  user_table:String = "user"
-    private const val  userinfo_table:String = "userinfo"
+
+object SqlUrl :ISqlinfo() {
 
     /**
      * 登录 sql
@@ -18,7 +16,7 @@ object SqlUrl {
     fun getLoginSql(login:LoginEntity):String{
         var sql:String = "select * from $login_Table where account='${login.account}'"
         println("getLoginSql :$sql")
-        return sql
+        return isSqlLog(sql)
     }
 
     /**
@@ -27,17 +25,15 @@ object SqlUrl {
      */
     fun getLoginInfoSql(account:String):String{
         var sql:String = "select * from $userinfo_table where account='$account'"
-        println("getLoginSql :$sql")
-        return sql
+        return isSqlLog(sql)
     }
 
     /**
      * 注册账号
      */
     fun getRegisterSql(login: LoginEntity):String{
-        var sql:String = "INSERT INTO  $login_Table (account,password,accountName,type) VALUES('${login.account}','${login.password}','${login.accountName}',${login.type})"
-        println("getRegisterSql :$sql")
-        return sql
+        var sql:String = "INSERT INTO  $login_Table (account,password,accountName,type) VALUES('${login.account}','${login.password}','${login.accountName}',${login.login_type})"
+        return isSqlLog(sql)
     }
 
     /**
@@ -49,10 +45,7 @@ object SqlUrl {
                 "VALUES('${userInfo.userName}',${userInfo.userAge},'${userInfo.userSex}','${userInfo.userCardName}'" +
                 ",'${userInfo.userCardID}','${userInfo.userEmail}','${userInfo.userPhone}','${userInfo.userCall}','${userInfo.registerAddress}')"
         println("getRegisterInfoSql :$sql")
-        return sql
+        return isSqlLog(sql)
     }
-
-
-
 
 }

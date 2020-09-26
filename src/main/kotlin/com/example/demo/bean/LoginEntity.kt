@@ -15,6 +15,5 @@ class LoginEntity {
     lateinit var password:String
     var accountName:String?=""
     //登录类型: 0 手机号 1 邮箱账号 2 用户名  3 其他(暂不支持)
-    var type:Int= 0
-
+    var login_type:Int= 0
 }

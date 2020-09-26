@@ -16,7 +16,6 @@ import javax.annotation.Resource
  * 数据库 操作类
  */
   object LoginSqlUtil {
-
     lateinit  var jdbc: JdbcTemplate
     fun  setJdbcTemplate(jc: JdbcTemplate):LoginSqlUtil{
         jdbc = jc

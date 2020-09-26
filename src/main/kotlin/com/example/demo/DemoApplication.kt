@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.PropertySource
 import org.springframework.core.env.Environment
 import javax.annotation.Resource
 
@@ -17,7 +16,6 @@ import javax.annotation.Resource
 
     @Resource
     lateinit var env: Environment
-
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {

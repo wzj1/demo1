@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository
  */
 @Repository
 class UserEntity {
-
     var id :Int = 0
     var userName:String?=null
     var userAge:Int=0
@@ -17,9 +16,6 @@ class UserEntity {
     var version:String=""
     var name:String=""
 
-
-
-
     override fun toString(): String {
         val sb =StringBuffer()
         sb.append("userName:$userName\r\n")
@@ -28,7 +24,6 @@ class UserEntity {
         sb.append("userAccount:$userAccount\r\n")
         sb.append("userPwd:$userPwd\r\n")
         sb.append("version:$version\r\n")
-
         return sb.toString()
     }
 }
